@@ -1,0 +1,33 @@
+<section>
+    <div class="container">
+        <div class="row mt-4">
+            <a href="/admin/add-products" class="btn btn-success ml-auto ">Add products</a>
+        </div>
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Action</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.Email}}</td>
+                    <td><a href="/admin/edit-users" class="btn btn-success ml-auto ">Edit</a>
+                    <a href="/admin/Delete-users/{{this._id}}" class="btn btn-danger ml-auto ">Delete</a>
+                    </td>
+
+                    
+                </tr>
+
+
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
